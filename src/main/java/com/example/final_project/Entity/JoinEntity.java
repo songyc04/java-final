@@ -5,20 +5,20 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name="users")
+@Table(name = "users")
 @Getter
 @Setter
 public class JoinEntity {
-   @Id
-   @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-   @Column(nullable = false, unique = true)
-   private String username;
+    @Column(nullable = false, unique = true)
+    private String username;
 
-   @Column(nullable = false)
-   private String password;
+    @Column(nullable = false)
+    private String password;
 
-   private String name;
-   private String email;
+    private String name;
+    private String email;
 }

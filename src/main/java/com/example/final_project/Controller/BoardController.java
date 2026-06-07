@@ -10,16 +10,16 @@ import com.example.final_project.DTO.BoardDTO;
 @Controller
 @RequestMapping("/board")
 public class BoardController {
-   @GetMapping("/save")
-   public String saveForm() {
-      return "save";
-   }
+    @GetMapping("/save")
+    public String saveForm() {
+        return "save";
+    }
 
-   @PostMapping("/save")
-   public String save(BoardDTO boardDTO) {
-      System.out.println("boardDTO=" + boardDTO);
-      return "redirect:/";
-      // return "index";
-   }
+    @PostMapping("/save")
+    public String save(BoardDTO boardDTO) {
+        System.out.println("boardDTO=" + boardDTO);
+        return "redirect:/";
+        // return "index";
+    }
 
 }
