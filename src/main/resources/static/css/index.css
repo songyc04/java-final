@@ -1,0 +1,370 @@
+/* 기본 리셋 및 폰트 세팅 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
+}
+
+body {
+    background-color: #050505; /* 매트한 딥 블랙 */
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 1. 네비게이션 바 디자인 */
+.navbar {
+    background-color: rgba(5, 5, 5, 0.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 90, 0, 0.15); /* 오렌지색 투명 라인 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #ff5a00; /* 시그니처 오렌지 */
+}
+
+.nav-menu {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-link {
+    font-weight: 600;
+    font-size: 15px;
+    color: #888888;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.btn-create {
+    color: #ff5a00;
+}
+
+.nav-auth {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-login {
+    color: #aaaaaa;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.2s;
+}
+.btn-login:hover {
+    color: #ffffff;
+}
+
+.btn-signup {
+    background-color: #ff5a00;
+    color: #000000;
+    padding: 10px 24px;
+    border-radius: 4px; /* 더 각진 솔리드 스타일 */
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+}
+
+.btn-signup:hover {
+    background-color: #ff7c33;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(255, 90, 0, 0.4);
+}
+
+/* 2. 히어로 섹션 디자인 */
+.hero-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 180px 20px 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 85vh;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.badge {
+    background-color: rgba(255, 90, 0, 0.1);
+    color: #ff5a00;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 90, 0, 0.3);
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.hero-content h1 span {
+    color: #ff5a00;
+}
+
+.hero-content p {
+    color: #888888;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 45px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary {
+    background-color: #ff5a00;
+    color: #000000;
+    padding: 16px 36px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #ff7c33;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 90, 0, 0.5);
+}
+
+.btn-secondary {
+    border: 1px solid #333333;
+    background-color: transparent;
+    color: #ffffff;
+    padding: 16px 36px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    border-color: #ff5a00;
+    color: #ff5a00;
+    background-color: rgba(255, 90, 0, 0.02);
+}
+
+.hero-visual {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glow-sphere {
+    width: 260px;
+    height: 260px;
+    background: linear-gradient(135deg, #ff5a00, #ff0055);
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.5;
+    animation: pulse 5s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.9); opacity: 0.4; }
+    100% { transform: scale(1.15); opacity: 0.6; }
+}
+
+/* 3. 라이브 경매 프리뷰 디자인 */
+.live-preview-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px 140px 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border-left: 4px solid #ff5a00;
+    padding-left: 15px;
+}
+
+.section-header h2 {
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+}
+
+.view-all {
+    color: #ff5a00;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+.item-card {
+    background-color: #121212; /* 다크 그레이 카드 배경 */
+    border: 1px solid #222222;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.item-card:hover {
+    transform: translateY(-4px);
+    border-color: #ff5a00;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8);
+}
+
+.card-thumb {
+    height: 220px;
+    background-color: #1a1a1a;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dummy-img {
+    font-size: 70px;
+}
+
+.status-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 4px 12px;
+    border-radius: 2px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.bidding {
+    background-color: #ff5a00;
+    color: #000000;
+    animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.card-body {
+    padding: 24px;
+}
+
+.card-body h3 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.4;
+    height: 52px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.price-info {
+    display: flex;
+    justify-content: space-between;
+    background-color: #181818;
+    padding: 14px 18px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    border: 1px solid #252525;
+}
+
+.label {
+    display: block;
+    font-size: 11px;
+    color: #666666;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.price {
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff; /* 흰색으로 정갈하게 처리 */
+}
+
+.time-countdown {
+    font-size: 17px;
+    font-weight: 700;
+    color: #ff5a00; /* 카운트다운을 오렌지색으로 강조하여 긴박감 부여 */
+}
+
+.btn-bid-now {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid #333333;
+    color: #ffffff;
+    padding: 14px;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.btn-bid-now:hover {
+    background-color: #ff5a00;
+    border-color: #ff5a00;
+    color: #000000;
+}
+
+/* 4. 푸터 디자인 */
+.footer {
+    border-top: 1px solid #151515;
+    padding: 50px 20px;
+    text-align: center;
+    color: #444444;
+    font-size: 13px;
+    font-weight: 500;
+}
